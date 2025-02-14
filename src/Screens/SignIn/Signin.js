@@ -47,7 +47,7 @@ const Signin = () => {
     setError('');
 
     try {
-      const response = await fetch(`http://localhost:3000/api/user/signin`, {
+      const response = await fetch(`https://backendchanges.onrender.com/api/user/signin`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ const Signin = () => {
     setForgotMessage("");
 
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/forgot-password`, {
+      const response = await fetch(`https://backendchanges.onrender.com/api/auth/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: forgotEmail }),
@@ -156,7 +156,7 @@ const Signin = () => {
     setForgotMessage("");
 
     try {
-      const response = await fetch(`http://localhost:3000/api/auth/reset-password`, {
+      const response = await fetch(`https://backendchanges.onrender.com/api/auth/reset-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: forgotEmail, otp, newPassword }),

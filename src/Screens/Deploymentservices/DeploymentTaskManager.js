@@ -19,7 +19,7 @@ const DeploymentTaskManager = () => {
  
   const fetchTasks = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/tasks");
+      const response = await fetch("https://backendchanges.onrender.com/api/tasks");
       const data = await response.json();
       setTasks(data);
     } catch (error) {
@@ -43,7 +43,7 @@ const DeploymentTaskManager = () => {
  
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch("http://localhost:3000/api/tasks", {
+      const response = await fetch("https://backendchanges.onrender.com/api/tasks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         Authorization: `Bearer ${token}`,

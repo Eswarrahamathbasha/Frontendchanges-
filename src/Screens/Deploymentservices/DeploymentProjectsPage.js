@@ -31,7 +31,7 @@ const DeploymentProjectsPage = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/deployments");
+        const response = await fetch("https://backendchanges.onrender.com/api/deployments");
         if (!response.ok) {
           throw new Error("Failed to fetch projects");
         }
