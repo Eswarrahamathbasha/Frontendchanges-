@@ -38,7 +38,7 @@ const Datastoreservice = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`${apiUrl}/api/datastore`, {
+      const response = await axios.get(`http://localhost:3000/api/datastore`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setData(response.data);
@@ -68,7 +68,7 @@ const Datastoreservice = () => {
 
     try {
       await axios.put(
-        `${apiUrl}/api/datastore/${renameServiceId}`,
+        `http://localhost:3000/api/datastore/${renameServiceId}`,
         { serviceName: renameServiceName },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

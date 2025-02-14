@@ -63,7 +63,7 @@ const CreateOrganization = () => {
 
         setIsSubmitting(true); // Disable form submission during API call
         try {
-            const response = await fetch(`${apiUrl}/api/org/organizations`, {
+            const response = await fetch(`http://localhost:3000/api/org/organizations`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -25,7 +25,7 @@ function CreateProjectForm() {
             }
  
             try {
-                const response = await fetch(`${apiUrl}/api/org/organizations`, {
+                const response = await fetch(`http://localhost:3000/api/org/organizations`, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function CreateProjectForm() {
                 throw new Error("Authorization token is missing.");
             }
  
-            const response = await fetch(`${apiUrl}/api/proj/projects`, {
+            const response = await fetch(`http://localhost:3000/api/proj/projects`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

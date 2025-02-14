@@ -12,7 +12,7 @@ const Notifications = ({ userEmail }) => {
  
   const fetchNotifications = async () => {
     try {
-      const response = await axios.get(`${apiUrl}/api/notifications/`);
+      const response = await axios.get(`http://localhost:3000/api/notifications/`);
       setNotifications(response.data);
     } catch (err) {
       setError('Failed to load notifications.');

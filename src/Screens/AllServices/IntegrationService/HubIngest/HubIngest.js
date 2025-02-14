@@ -32,7 +32,7 @@ const Hubingest = () => {
             }
 
             try {
-                const response = await axios.get(`${apiUrl}/api/hubingest`, {
+                const response = await axios.get(`http://localhost:3000/api/hubingest`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 setHubIngests(response.data);
@@ -90,7 +90,7 @@ const Hubingest = () => {
         try {
             await Promise.all(
                 selectedHubIngests.map(async (hubIngest) => {
-                    await axios.delete(`${apiUrl}/api/hubingest/${hubIngest._id}`, {
+                    await axios.delete(`http://localhost:3000/api/hubingest/${hubIngest._id}`, {
                         headers: { Authorization: `Bearer ${token}` },
                     });
                 })
